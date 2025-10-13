@@ -1,9 +1,22 @@
-main program
- 
-initialization
+#include <stdio.h>
+#include <stdlib.h>
 
-initial message
+/* main program */
+int main(void)
+{
+  /* initialization */
+  int i = 0;
+  int result = 0;
 
-main program loop
+  /* initial message */
+  puts("Let's go!");
 
-output results
+  /* main program loop */
+  for (; i < 10; i++)
+    result++;
+
+  /* output results */
+  printf("Result is %d\n", result);
+
+  return 0;
+}
