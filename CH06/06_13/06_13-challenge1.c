@@ -6,7 +6,8 @@
 struct person fill(void);
 void output(struct person y);
 
-struct person {
+struct person
+{
 	char name[SIZE];
 	int id;
 };
@@ -27,8 +28,18 @@ int main()
 
 struct person fill(void)
 {
+	// struct person p;
+	// printf("Enter person name (without gaps): ");
+	// scanf("%s",p.name);
+	static struct person p; // static !!!
+	printf("Enter person name: ");
+	fgets(p.name, SIZE, stdin);
+	printf("Enter person id: ");
+	scanf("%d", &p.id);
+	return p;
 }
 
 void output(struct person y)
 {
+	printf("ID %d belongs to person %s:\n", y.id, y.name);
 }
